@@ -19,34 +19,32 @@ public class Mamifero extends Animal {
 		listado = new LinkedList <Mamifero>();
 	}
 	
-	Mamifero() {
+	Mamifero(String nombre, int edad, String genero, Zona zona) {
 		pelaje = true;
 		patas = 4;
+		this.nombre = nombre;
+		this.edad = edad;
+		this.genero = genero;
+		this.zona = zona;
 	}
 	
-	void crearCaballo(String nombre, int edad, String genero, Zona zona) {
+	public void crearCaballo() {
 		caballos++;
-		Mamifero mamifero = new Mamifero();
+		Mamifero mamifero = new Mamifero(nombre, edad, genero, zona);
 		listado.add(mamifero);
 		habitad = "pradera";
-		this.nombre = nombre;
-		this.edad = edad;
-		this.genero = genero;
-		this.zona = zona;
+		
 		
 		
 	}
-	void crearLeon(String nombre, int edad, String genero, Zona zona) {
+	public void crearLeon() {
 		leones++;
-		Mamifero mamifero = new Mamifero();
+		Mamifero mamifero = new Mamifero(nombre, edad, genero, zona);
 		listado.add(mamifero);
 		habitad = "selva";
-		this.nombre = nombre;
-		this.edad = edad;
-		this.genero = genero;
-		this.zona = zona;
+		
 	}
-	int cantidadMamiferos() {
+	public int cantidadMamiferos() {
 		return listado.size();
 	}
 	

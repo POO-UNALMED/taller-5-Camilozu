@@ -17,23 +17,23 @@ static {
 public Animal() {
 	totalAnimales++;
 }
-String movimiento(Mamifero animal) {
+public String movimiento(Mamifero animal) {
 	return "desplazarce";	
 }
-String movimiento(Ave animal) {
+public String movimiento(Ave animal) {
 	return "volar";	
 }
-String movimiento(Reptil animal) {
+public String movimiento(Reptil animal) {
 	return "Reptar";	
 }
-String movimiento(Pez animal) {
+public String movimiento(Pez animal) {
 	return "nadar";	
 }
-String movimiento(Anfibio animal) {
+public String movimiento(Anfibio animal) {
 	return "saltar";	
 }
 
-void totalPorTipo() {
+public void totalPorTipo() {
 
 	System.out.print("Mamiferos: "+Mamifero.listado.size());
 	System.out.print("Aves: "+Ave.listado.size());

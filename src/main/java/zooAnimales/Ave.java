@@ -13,33 +13,34 @@ public class Ave extends Animal {
    static {
 		listado = new LinkedList <Ave>();
 	}
+   
+   public Ave(String nombre, int edad, String genero, Zona zona) {
+	    this.nombre = nombre;
+	    this.edad = edad;
+		this.genero = genero;
+		this.zona = zona;
+   }
 	
 
 	
-	void crearHalcon(String nombre, int edad, String genero, Zona zona) {
-		Ave ave = new Ave();
+	public void crearHalcon() {
+		Ave ave = new Ave(nombre, edad, genero, zona);
 		listado.add(ave);
 		halcones++;
 		colorPlumas ="cafe glorioso";
-		habitad = "montañas";
-		this.nombre = nombre;
-		this.edad = edad;
-		this.genero = genero;
-		this.zona = zona;
+		habitad = "montanas";
+		
 	}
 	
-	void crearAguila(String nombre, int edad, String genero, Zona zona) {
-		Ave ave = new Ave();
+	public void crearAguila() {
+		Ave ave = new Ave(nombre, edad, genero, zona);
 		listado.add(ave);
 		aguilas++;
 		colorPlumas ="blanco y amarillo";
-		habitad = "montañas";
-		this.nombre = nombre;
-		this.edad = edad;
-		this.genero = genero;
-		this.zona = zona;
+		habitad = "montanas";
+		
 	}
-	int cantidadAves() {
+	public int cantidadAves() {
 		return listado.size();
 	}
 }

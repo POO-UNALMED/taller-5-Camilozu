@@ -16,35 +16,35 @@ public class Reptil extends Animal {
 		listado = new LinkedList <Reptil>();
 	}
 	
+	public Reptil(String nombre, int edad, String genero, Zona zona) {
+		this.nombre = nombre;
+		this.edad = edad;
+		this.genero = genero;
+		this.zona = zona;
+	   }
 	
-	void crearIguana(String nombre, int edad, String genero, Zona zona) {
-		Reptil reptil = new Reptil();
+	
+	public void crearIguana() {
+		Reptil reptil = new Reptil(nombre, edad, genero, zona);
 		listado.add(reptil);
 		iguanas++;
 		colorEscamas = "verde";
 		largoCola = 3;
 		habitad = "humedal";
-		this.nombre = nombre;
-		this.edad = edad;
-		this.genero = genero;
-		this.zona = zona;
+		
 	}
-    void crearSerpiente(String nombre, int edad, String genero, Zona zona) {
-    	Reptil reptil = new Reptil();
+    public void crearSerpiente() {
+    	Reptil reptil = new Reptil(nombre, edad, genero, zona);
 		listado.add(reptil);
 		serpientes++;
 		colorEscamas = "blanco";
 		largoCola = 1;
 		habitad = "jungla";
-		this.nombre = nombre;
-		this.edad = edad;
-		this.genero = genero;
-		this.zona = zona;
-    
+		
 		
 	}
     
-    int cantidadReptiles() {
+    public int cantidadReptiles() {
 		return listado.size();
 	}
 }

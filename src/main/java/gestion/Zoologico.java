@@ -9,7 +9,7 @@ public static String nombre;
 	static LinkedList <Zona> zonas;
 	Zoologico() {
 		nombre = "Zoologico y centro de rehabilitación";
-		ubicacion = "Oriente Antioqueño";
+		ubicacion = "Oriente Antioqueno";
 		zonas = new LinkedList<Zona>();					
 	}
 

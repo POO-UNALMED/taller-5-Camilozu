@@ -16,37 +16,35 @@ public class Pez extends Animal {
 		listado = new LinkedList <Pez>();
 	}
 	
-	Pez() {
+	public Pez(String nombre, int edad, String genero, Zona zona) {
+		this.nombre = nombre;
+		this.edad = edad;
+		this.genero = genero;
+		this.zona = zona;
 		
 	}
 	
-	void crearSalmon(String nombre, int edad, String genero, Zona zona) {
-		Pez pez = new Pez();
+	public void crearSalmon() {
+		Pez pez = new Pez(nombre, edad, genero, zona);
 		listado.add(pez);
 		salmones++;
 		colorEscamas = "rojo";
 		cantidadAletas = 6;
 		habitad = "oceano";
-		this.nombre = nombre;
-		this.edad = edad;
-		this.genero = genero;
-		this.zona = zona;
+		
 	}
 	
-	void crearBacalao(String nombre, int edad, String genero, Zona zona) {
-		Pez pez = new Pez();
+	public void crearBacalao() {
+		Pez pez = new Pez(nombre, edad, genero, zona);
 		listado.add(pez);
 		bacalaos++;
 		colorEscamas = "gris";
 		cantidadAletas = 6;
 		habitad = "oceano";
-		this.nombre = nombre;
-		this.edad = edad;
-		this.genero = genero;
-		this.zona = zona;
+		
 	}
 	
-	int cantidadPeces() {
+	public int cantidadPeces() {
 		return listado.size();
 	}
 }

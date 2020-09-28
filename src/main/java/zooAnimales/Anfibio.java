@@ -16,31 +16,33 @@ public class Anfibio extends Animal {
 		listado = new LinkedList <Anfibio>();
 	}
 	
-
-	void crearRana(String nombre, int edad, String genero, Zona zona) {
-		Anfibio anfibio  = new Anfibio();
-		listado.add(anfibio);
-		colorPiel = "rojo";
-		venenoso = true;
-		habitad = "selva";
+	public Anfibio(String nombre, int edad, String genero, Zona zona) {
 		this.nombre = nombre;
 		this.edad = edad;
 		this.genero = genero;
 		this.zona = zona;
 		
 	}
-	void crearsalamdra(String nombre, int edad, String genero, Zona zona) {
-		Anfibio anfibio  = new Anfibio();
+	
+
+	public void crearRana() {
+		Anfibio anfibio  = new Anfibio(nombre, edad, genero, zona);
+		listado.add(anfibio);
+		colorPiel = "rojo";
+		venenoso = true;
+		habitad = "selva";
+		
+		
+	}
+	public void crearsalamdra() {
+		Anfibio anfibio  = new Anfibio(nombre, edad, genero, zona);
 		listado.add(anfibio);
 		colorPiel = "negro y amarillo";
 		venenoso = false;
 		habitad = "selva";
-		this.nombre = nombre;
-		this.edad = edad;
-		this.genero = genero;
-		this.zona = zona;
+		
 	}
-	int cantidadAnfibios() {
+	public int cantidadAnfibios() {
 		return listado.size();
 	}
 }
