@@ -15,21 +15,19 @@ public class Anfibio extends Animal {
 	static {
 		listado = new LinkedList <Anfibio>();
 	}
-	Anfibio() {
-		this(null, 0, null, null);
+	public Anfibio() {
+		super(null, 0, null, null, null);
 	}
-	Anfibio(String nombre, int edad, String genero, Zona zona) {
-		this.nombre = nombre;
-		this.edad = edad;
-		this.genero = genero;
-		this.zona = zona;
+	public Anfibio(String nombre, int edad, String habitad, String genero, Zona zona) {
+		super(nombre, edad, habitad, genero, zona);
 		
+
 	}
 	
 
 	public void crearRana() {
-		Anfibio anfibio;
-		anfibio = new Anfibio();
+		ranas++;
+		Anfibio anfibio = new Anfibio(nombre, edad, habitad, genero, zona);
 		listado.add(anfibio);
 		colorPiel = "rojo";
 		venenoso = true;
@@ -38,7 +36,8 @@ public class Anfibio extends Animal {
 		
 	}
 	public void crearsalamdra() {
-		Anfibio anfibio  = new Anfibio();
+		salamandras++;
+		Anfibio anfibio  = new Anfibio(nombre, edad, habitad, genero, zona);
 		listado.add(anfibio);
 		colorPiel = "negro y amarillo";
 		venenoso = false;

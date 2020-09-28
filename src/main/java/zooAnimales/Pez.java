@@ -15,19 +15,16 @@ public class Pez extends Animal {
 	static {
 		listado = new LinkedList <Pez>();
 	}
-	Pez() {
-		this(null, 0, null, null);
+	public Pez() {
+		super(null, 0, null, null, null);
 	}
-	Pez(String nombre, int edad, String genero, Zona zona) {
-		this.nombre = nombre;
-		this.edad = edad;
-		this.genero = genero;
-		this.zona = zona;
+	public Pez(String nombre, int edad, String habitad, String genero, Zona zona) {
+		super(nombre, edad, habitad, genero, zona);
 		
 	}
 	
 	public void crearSalmon() {
-		Pez pez = new Pez(nombre, edad, genero, zona);
+		Pez pez = new Pez(nombre, edad, habitad, genero, zona);
 		listado.add(pez);
 		salmones++;
 		colorEscamas = "rojo";
@@ -37,7 +34,7 @@ public class Pez extends Animal {
 	}
 	
 	public void crearBacalao() {
-		Pez pez = new Pez(nombre, edad, genero, zona);
+		Pez pez = new Pez(nombre, edad, habitad, genero, zona);
 		listado.add(pez);
 		bacalaos++;
 		colorEscamas = "gris";

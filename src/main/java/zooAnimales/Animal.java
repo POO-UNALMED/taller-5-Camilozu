@@ -14,7 +14,13 @@ static {
 	totalAnimales = 0;
 }
 
-public Animal() {
+
+
+public Animal(String nombre, int edad, String habitad, String genero, Zona zona) {
+	this.nombre = nombre;
+	this.edad = edad;
+	this.genero = genero;
+	this.zona = zona;
 	totalAnimales++;
 }
 public String movimiento(Mamifero animal) {

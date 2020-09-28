@@ -15,19 +15,16 @@ public class Reptil extends Animal {
 	static {
 		listado = new LinkedList <Reptil>();
 	}
-	Reptil() {
-		this(null, 0, null, null);
+	public Reptil() {
+		super(null, 0, null, null, null);
 	}
-	Reptil(String nombre, int edad, String genero, Zona zona) {
-		this.nombre = nombre;
-		this.edad = edad;
-		this.genero = genero;
-		this.zona = zona;
+	public Reptil(String nombre, int edad, String habitad, String genero, Zona zona) {
+		super(nombre, edad, habitad, genero, zona);
 	   }
 	
 	
 	public void crearIguana() {
-		Reptil reptil = new Reptil(nombre, edad, genero, zona);
+		Reptil reptil = new Reptil(nombre, edad, habitad, genero, zona);
 		listado.add(reptil);
 		iguanas++;
 		colorEscamas = "verde";
@@ -36,7 +33,7 @@ public class Reptil extends Animal {
 		
 	}
     public void crearSerpiente() {
-    	Reptil reptil = new Reptil(nombre, edad, genero, zona);
+    	Reptil reptil = new Reptil(nombre, edad, habitad, genero, zona);
 		listado.add(reptil);
 		serpientes++;
 		colorEscamas = "blanco";
