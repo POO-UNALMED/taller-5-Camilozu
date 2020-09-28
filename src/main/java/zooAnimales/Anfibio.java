@@ -32,7 +32,7 @@ public class Anfibio extends Animal {
 
 	public void crearRana() {
 		Anfibio anfibio;
-		anfibio = new Anfibio(nombre, edad, genero, zona);
+		anfibio = new Anfibio();
 		listado.add(anfibio);
 		colorPiel = "rojo";
 		venenoso = true;
@@ -41,7 +41,7 @@ public class Anfibio extends Animal {
 		
 	}
 	public void crearsalamdra() {
-		Anfibio anfibio  = new Anfibio(nombre, edad, genero, zona);
+		Anfibio anfibio  = new Anfibio();
 		listado.add(anfibio);
 		colorPiel = "negro y amarillo";
 		venenoso = false;
