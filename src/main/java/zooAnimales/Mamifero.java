@@ -19,6 +19,10 @@ public class Mamifero extends Animal {
 		listado = new LinkedList <Mamifero>();
 	}
 	
+	Mamifero() {
+		pelaje = true;
+		patas = 4;
+	}
 	Mamifero(String nombre, int edad, String genero, Zona zona) {
 		pelaje = true;
 		patas = 4;

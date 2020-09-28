@@ -15,8 +15,10 @@ public class Pez extends Animal {
 	static {
 		listado = new LinkedList <Pez>();
 	}
-	
-	public Pez(String nombre, int edad, String genero, Zona zona) {
+	Pez() {
+		
+	}
+	Pez(String nombre, int edad, String genero, Zona zona) {
 		this.nombre = nombre;
 		this.edad = edad;
 		this.genero = genero;

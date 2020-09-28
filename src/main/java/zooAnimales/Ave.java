@@ -13,8 +13,10 @@ public class Ave extends Animal {
    static {
 		listado = new LinkedList <Ave>();
 	}
-   
-   public Ave(String nombre, int edad, String genero, Zona zona) {
+   Ave() {
+	   
+   }
+   Ave(String nombre, int edad, String genero, Zona zona) {
 	    this.nombre = nombre;
 	    this.edad = edad;
 		this.genero = genero;

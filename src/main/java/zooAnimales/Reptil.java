@@ -15,8 +15,10 @@ public class Reptil extends Animal {
 	static {
 		listado = new LinkedList <Reptil>();
 	}
-	
-	public Reptil(String nombre, int edad, String genero, Zona zona) {
+	Reptil() {
+		
+	}
+	Reptil(String nombre, int edad, String genero, Zona zona) {
 		this.nombre = nombre;
 		this.edad = edad;
 		this.genero = genero;
