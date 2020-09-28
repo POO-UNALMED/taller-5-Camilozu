@@ -14,7 +14,10 @@ public class Ave extends Animal {
 		listado = new LinkedList <Ave>();
 	}
    Ave() {
-	   
+	   this.nombre = null;
+		this.edad = 0;
+		this.genero = null;
+		this.zona = null;
    }
    Ave(String nombre, int edad, String genero, Zona zona) {
 	    this.nombre = nombre;

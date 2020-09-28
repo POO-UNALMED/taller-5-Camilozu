@@ -16,7 +16,10 @@ public class Pez extends Animal {
 		listado = new LinkedList <Pez>();
 	}
 	Pez() {
-		
+		this.nombre = null;
+		this.edad = 0;
+		this.genero = null;
+		this.zona = null;
 	}
 	Pez(String nombre, int edad, String genero, Zona zona) {
 		this.nombre = nombre;

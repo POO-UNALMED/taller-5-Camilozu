@@ -16,7 +16,10 @@ public class Anfibio extends Animal {
 		listado = new LinkedList <Anfibio>();
 	}
 	Anfibio() {
-		
+		this.nombre = null;
+		this.edad = 0;
+		this.genero = null;
+		this.zona = null;
 	}
 	Anfibio(String nombre, int edad, String genero, Zona zona) {
 		this.nombre = nombre;
@@ -28,7 +31,8 @@ public class Anfibio extends Animal {
 	
 
 	public void crearRana() {
-		Anfibio anfibio  = new Anfibio(nombre, edad, genero, zona);
+		Anfibio anfibio;
+		anfibio = new Anfibio(nombre, edad, genero, zona);
 		listado.add(anfibio);
 		colorPiel = "rojo";
 		venenoso = true;
