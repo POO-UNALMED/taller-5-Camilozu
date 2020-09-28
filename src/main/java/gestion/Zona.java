@@ -6,15 +6,16 @@ import zooAnimales.*;
 
 public class Zona {
 public String nombre;
-static Zoologico zoo;
+public Zoologico zoo;
 LinkedList <Animal> animales;
 
-static {
-	zoo = new Zoologico();
-
+Zona() {
+	nombre = null;
+	animales = new LinkedList<Animal>();
 }
 
-Zona() {
+Zona(String nombre, Zoologico zoo) {
+	this.nombre = nombre;
 	animales = new LinkedList<Animal>();
 }
 

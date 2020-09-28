@@ -48,7 +48,7 @@ public String toString() {
 		return "Mi nombre es "+nombre+", tengo una edad de "+edad+", habito en "+habitad+" y mi genero es "+genero;
 	}
 	else 
-	    return "Mi nombre es "+nombre+", tengo una edad de "+edad+", habito en "+habitad+" y mi genero es "+genero+", la zona es la que me ubcio es "+zona.nombre+", en el"+Zoologico.nombre;
+	    return "Mi nombre es "+nombre+", tengo una edad de "+edad+", habito en "+habitad+" y mi genero es "+genero+", la zona es la que me ubcio es "+zona.nombre+", en el"+zona.zoo.nombre;
 }
 
 }

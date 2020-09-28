@@ -4,17 +4,18 @@ import java.util.*;
 import zooAnimales.*;
 
 public class Zoologico {
-public static String nombre;
-	static String ubicacion;
-	static LinkedList <Zona> zonas;
-	Zoologico() {
-		nombre = "Zoologico y centro de rehabilitacion";
-		ubicacion = "Oriente Antioqueno";
+public String nombre;
+    String ubicacion;
+	LinkedList <Zona> zonas;
+	Zoologico(String nombre, String ubicacion) {
+		this.nombre = nombre;
+		this.ubicacion = ubicacion;
 		zonas = new LinkedList<Zona>();					
 	}
 
 
-    void agregarZonas() {
+ 
+	void agregarZonas() {
     	Zona zona = new Zona();
      zonas.add(zona);
     }
