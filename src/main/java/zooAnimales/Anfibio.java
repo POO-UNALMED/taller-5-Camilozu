@@ -11,9 +11,10 @@ public class Anfibio extends Animal {
 	String colorPiel;
 	boolean venenoso;
 	static LinkedList <Anfibio> listado;
-	
+	static String movimiento;
 	static {
 		listado = new LinkedList <Anfibio>();
+		movimiento = "saltar";
 	}
 	public Anfibio() {
 		super(null, 0, null, null, null);
@@ -21,8 +22,10 @@ public class Anfibio extends Animal {
 	public Anfibio(String nombre, int edad, String habitad, String genero, Zona zona) {
 		super(nombre, edad, habitad, genero, zona);
 		
-
 	}
+	public String movimiento() {
+		return movimiento;
+   }
 	
 
 	public void crearRana() {

@@ -4,17 +4,15 @@ import java.util.*;
 import zooAnimales.*;
 
 public class Zoologico {
-public String nombre;
-    String ubicacion;
+    private String nombre;
+    private String ubicacion;
 	LinkedList <Zona> zonas;
-	Zoologico(String nombre, String ubicacion) {
+	public Zoologico(String nombre, String ubicacion) {
 		this.nombre = nombre;
 		this.ubicacion = ubicacion;
 		zonas = new LinkedList<Zona>();					
 	}
 
-
- 
 	void agregarZonas() {
     	Zona zona = new Zona();
      zonas.add(zona);
@@ -22,5 +20,23 @@ public String nombre;
     int cantidadTotalAnimales() {
     	return Animal.totalAnimales;
     }
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getUbicacion() {
+		return ubicacion;
+	}
+
+	public void setUbicacion(String ubicacion) {
+		this.ubicacion = ubicacion;
+	}
+	
+    
 
 }

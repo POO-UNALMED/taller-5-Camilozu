@@ -11,9 +11,10 @@ public class Reptil extends Animal {
 	String colorEscamas;
 	int largoCola;
 	static LinkedList<Reptil> listado;
-	
+	static String movimiento;
 	static {
 		listado = new LinkedList <Reptil>();
+		movimiento = "reptar";
 	}
 	public Reptil() {
 		super(null, 0, null, null, null);
@@ -21,7 +22,9 @@ public class Reptil extends Animal {
 	public Reptil(String nombre, int edad, String habitad, String genero, Zona zona) {
 		super(nombre, edad, habitad, genero, zona);
 	   }
-	
+	public String movimiento() {
+		return movimiento;
+   }	
 	
 	public void crearIguana() {
 		Reptil reptil = new Reptil(nombre, edad, habitad, genero, zona);

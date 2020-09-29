@@ -4,17 +4,57 @@ import gestion.*;
 
 public class Animal {
 public static int totalAnimales;
-String nombre;
-int edad;
-String habitad;
-String genero;
-Zona zona;
-
-static {
-	totalAnimales = 0;
+protected String nombre;
+protected int edad;
+protected String habitad;
+protected String genero;
+protected Zona zona;
+protected String getNombre() {
+	return nombre;
+}
+public void setNombre(String nombre) {
+	this.nombre = nombre;
+}
+public int getEdad() {
+	return edad;
+}
+public void setEdad(int edad) {
+	this.edad = edad;
+}
+public String getHabitad() {
+	return habitad;
+}
+public void setHabitad(String habitad) {
+	this.habitad = habitad;
+}
+public String getGenero() {
+	return genero;
+}
+public void setGenero(String genero) {
+	this.genero = genero;
+}
+public Zona getZona() {
+	return zona;
+}
+public void setZona(Zona zona) {
+	this.zona = zona;
 }
 
 
+private String movimiento;
+
+static {
+ totalAnimales = 0;
+
+}
+public Animal() {
+	this(null, 0, null, null, null);
+	totalAnimales++;
+}
+public Animal(String nombre, int edad, String habitad, String genero) {
+	this(nombre, edad, habitad, genero, null);
+	totalAnimales++;
+}
 
 public Animal(String nombre, int edad, String habitad, String genero, Zona zona) {
 	this.nombre = nombre;
@@ -23,29 +63,17 @@ public Animal(String nombre, int edad, String habitad, String genero, Zona zona)
 	this.zona = zona;
 	totalAnimales++;
 }
-public String movimiento(Mamifero animal) {
-	return "desplazarce";	
-}
-public String movimiento(Ave animal) {
-	return "volar";	
-}
-public String movimiento(Reptil animal) {
-	return "Reptar";	
-}
-public String movimiento(Pez animal) {
-	return "nadar";	
-}
-public String movimiento(Anfibio animal) {
-	return "saltar";	
+public String movimiento() {
+	return movimiento;
 }
 
-public void totalPorTipo() {
-
-	System.out.print("Mamiferos: "+Mamifero.listado.size());
-	System.out.print("Aves: "+Ave.listado.size());
-	System.out.print("Reptiles: "+Reptil.listado.size());
-	System.out.print("Peces: "+Pez.listado.size());
-	System.out.print("Anfibios: "+Anfibio.listado.size());
+public static String totalPorTipo() {
+	return "Mamiferos: "+Mamifero.listado.size()+
+	" Aves: "+Ave.listado.size()+
+	" Reptiles: "+Reptil.listado.size()+
+	" Peces: "+Pez.listado.size()+
+	" Anfibios: "+Anfibio.listado.size();
+	
 }
 
 
@@ -54,7 +82,7 @@ public String toString() {
 		return "Mi nombre es "+nombre+", tengo una edad de "+edad+", habito en "+habitad+" y mi genero es "+genero;
 	}
 	else 
-	    return "Mi nombre es "+nombre+", tengo una edad de "+edad+", habito en "+habitad+" y mi genero es "+genero+", la zona es la que me ubcio es "+zona.nombre+", en el"+zona.zoo.nombre;
+	    return "Mi nombre es "+nombre+", tengo una edad de "+edad+", habito en "+habitad+" y mi genero es "+genero+", la zona es la que me ubcio es "+zona.getNombre()+", en el"+zona.getZoo().getNombre();
 }
 
 }

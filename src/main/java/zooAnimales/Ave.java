@@ -7,11 +7,12 @@ public class Ave extends Animal {
    int halcones;
    int aguilas;
    String colorPlumas;
-   
+   static String movimiento;
    static LinkedList <Ave> listado;
    
    static {
 		listado = new LinkedList <Ave>();
+		movimiento = "volar";
 	}
    public Ave() {
 	   super(null, 0, null, null, null);
@@ -19,9 +20,10 @@ public class Ave extends Animal {
    public Ave(String nombre, int edad, String habitad, String genero, Zona zona) {
 	   super(nombre, edad, habitad, genero, zona);
    }
-	
-
-	
+   public String movimiento() {
+		return movimiento;
+   }
+   
 	public void crearHalcon() {
 		Ave ave = new Ave(nombre, edad, habitad, genero, zona);
 		listado.add(ave);

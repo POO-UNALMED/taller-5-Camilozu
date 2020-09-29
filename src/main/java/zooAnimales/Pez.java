@@ -11,9 +11,10 @@ public class Pez extends Animal {
 	String colorEscamas;
 	int cantidadAletas;
 	static LinkedList <Pez> listado;
-	
+	static String movimiento;
 	static {
 		listado = new LinkedList <Pez>();
+		movimiento = "nadar";
 	}
 	public Pez() {
 		super(null, 0, null, null, null);
@@ -22,6 +23,9 @@ public class Pez extends Animal {
 		super(nombre, edad, habitad, genero, zona);
 		
 	}
+	public String movimiento() {
+		return movimiento;
+   }
 	
 	public void crearSalmon() {
 		Pez pez = new Pez(nombre, edad, habitad, genero, zona);

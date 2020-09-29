@@ -11,12 +11,14 @@ public class Mamifero extends Animal {
 	
 	int caballos;
 	int leones;
-	boolean pelaje;
-	int patas;
+	private boolean pelaje;
+	private int patas;
+	private static String movimiento;
 	static LinkedList <Mamifero> listado;
 	
 	static {
 		listado = new LinkedList <Mamifero>();
+		movimiento = "desplazarce";
 	}
 	
 	public Mamifero() {
@@ -26,7 +28,9 @@ public class Mamifero extends Animal {
 		super(nombre, edad, habitad, genero, zona);
 		pelaje = true;
 		patas = 4;
-		
+	}
+	public String movimiento() {
+		return movimiento;	
 	}
 	
 	public void crearCaballo() {
@@ -34,18 +38,12 @@ public class Mamifero extends Animal {
 		habitad = "pradera";
 		Mamifero mamifero = new Mamifero(nombre, edad, habitad, genero, zona);
 		listado.add(mamifero);
-		
-		
-		
-		
 	}
 	public void crearLeon() {
 		leones++;
 		habitad = "selva";
 		Mamifero mamifero = new Mamifero(nombre, edad, habitad, genero, zona);
-		listado.add(mamifero);
-		
-		
+		listado.add(mamifero);	
 	}
 	public int cantidadMamiferos() {
 		return listado.size();
