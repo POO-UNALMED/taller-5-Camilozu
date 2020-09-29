@@ -47,11 +47,11 @@ public String movimiento() {
 }
 
 public static String totalPorTipo() {
-	return "Mamiferos: "+Mamifero.mamiferos+
-	" Aves: "+Ave.aves+
-	" Reptiles: "+Reptil.reptiles+
-	" Peces: "+Pez.peces+
-	" Anfibios: "+Anfibio.anfibios;
+	return "Mamiferos: "+ Mamifero.mamiferos +"\n"+
+	"Aves: "+ Ave.aves +"\n"+
+	"Reptiles: "+ Reptil.reptiles +"\n"+
+	"Peces: "+ Pez.peces +"\n"+
+	"Anfibios: " +Anfibio.anfibios;
 	
 }
 

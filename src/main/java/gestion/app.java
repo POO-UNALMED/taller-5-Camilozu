@@ -4,16 +4,21 @@ public class app {
 
 	public static void main(String[] args) {
 				
-		Animal a1 = new Anfibio();
-		Animal a2 = new Ave();
-		Animal a3 = new Mamifero();
-		Animal a4 = new Pez();
-		Animal a5 = new Reptil();
-		System.out.println(a1.movimiento());
-		System.out.println(a2.movimiento());
-		System.out.println(a3.movimiento());
-	    System.out.println(a4.movimiento());
-	    System.out.println(a5.movimiento());
+		new Anfibio();
+		new Anfibio();
+		new Mamifero();
+		new Mamifero();
+		new Mamifero();
+		new Reptil();
+		new Pez();
+		new Ave();
+		new Ave();
+		System.out.println(Animal.totalPorTipo());
+		System.out.println("Mamiferos: 4\n" + 
+				"Aves: 4\n" + 
+				"Reptiles: 2\n" + 
+				"Peces: 2\n" + 
+				"Anfibios: 3");
 	}
 
 }
