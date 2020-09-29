@@ -27,7 +27,7 @@ public void agregarAnimales() {
 public void agregarAnimales(Animal animal) {
 	animales.add(animal);
 }
-int cantidadAnimales() {
+public int cantidadAnimales() {
 	return animales.size();
 }
 
