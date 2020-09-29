@@ -6,44 +6,62 @@ import gestion.Zona;
 
 public class Pez extends Animal {
 
-	int salmones;
-	int bacalaos;
-	String colorEscamas;
-	int cantidadAletas;
+	public int salmones;
+	public int bacalaos;
+	private String colorEscamas;
+	private int cantidadAletas;
 	static LinkedList <Pez> listado;
-	static String movimiento;
+	private static String movimiento;
 	static {
 		listado = new LinkedList <Pez>();
 		movimiento = "nadar";
 	}
+	
+	public String getColorEscamas() {
+		return colorEscamas;
+	}
+	public void setColorEscamas(String colorEscamas) {
+		this.colorEscamas = colorEscamas;
+	}
+	public int getCantidadAletas() {
+		return cantidadAletas;
+	}
+	public void setCantidadAletas(int cantidadAletas) {
+		this.cantidadAletas = cantidadAletas;
+	}
 	public Pez() {
 		super(null, 0, null, null, null);
 	}
-	public Pez(String nombre, int edad, String habitad, String genero, Zona zona) {
-		super(nombre, edad, habitad, genero, zona);
+	public Pez(String nombre, int edad, String habitat, String genero, String colorEscamas, int cantidadAletas) {
+		   super(nombre, edad, habitat, genero, null);
+		   this.colorEscamas = colorEscamas;
+		   this.cantidadAletas = cantidadAletas;
+	   }
+	public Pez(String nombre, int edad, String habitat, String genero, Zona zona) {
+		super(nombre, edad, habitat, genero, zona);
 		
 	}
 	public String movimiento() {
 		return movimiento;
    }
 	
-	public void crearSalmon() {
-		Pez pez = new Pez(nombre, edad, habitad, genero, zona);
+	public void crearSalmon(String nombre, int edad,String genero) {
+		Pez pez = new Pez(nombre, edad, habitat, genero, zona);
 		listado.add(pez);
 		salmones++;
 		colorEscamas = "rojo";
 		cantidadAletas = 6;
-		habitad = "oceano";
+		habitat = "oceano";
 		
 	}
 	
-	public void crearBacalao() {
-		Pez pez = new Pez(nombre, edad, habitad, genero, zona);
+	public void crearBacalao(String nombre, int edad,String genero) {
+		Pez pez = new Pez(nombre, edad, habitat, genero, zona);
 		listado.add(pez);
 		bacalaos++;
 		colorEscamas = "gris";
 		cantidadAletas = 6;
-		habitad = "oceano";
+		habitat = "oceano";
 		
 	}
 	

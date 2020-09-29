@@ -9,8 +9,8 @@ import gestion.Zona;
 public class Mamifero extends Animal {
 
 	
-	int caballos;
-	int leones;
+	public int caballos;
+	public int leones;
 	private boolean pelaje;
 	private int patas;
 	private static String movimiento;
@@ -24,8 +24,13 @@ public class Mamifero extends Animal {
 	public Mamifero() {
 		super(null, 0, null, null, null);
 	}
-	public Mamifero(String nombre, int edad, String habitad, String genero, Zona zona) {
-		super(nombre, edad, habitad, genero, zona);
+	public Mamifero(String nombre, int edad, String habitat, String genero, boolean pelaje, int patas) {
+		   super(nombre, edad, habitat, genero, null);
+		   this.pelaje = pelaje;
+		   this.patas = patas;
+	   }
+	public Mamifero(String nombre, int edad, String habitat, String genero, Zona zona) {
+		super(nombre, edad, habitat, genero, zona);
 		pelaje = true;
 		patas = 4;
 	}
@@ -33,21 +38,34 @@ public class Mamifero extends Animal {
 		return movimiento;	
 	}
 	
-	public void crearCaballo() {
+	public void crearCaballo(String nombre, int edad,String genero) {
 		caballos++;
-		habitad = "pradera";
-		Mamifero mamifero = new Mamifero(nombre, edad, habitad, genero, zona);
+		habitat = "pradera";
+		Mamifero mamifero = new Mamifero(nombre, edad, habitat, genero, zona);
 		listado.add(mamifero);
 	}
-	public void crearLeon() {
+	public void crearLeon(String nombre, int edad,String genero) {
 		leones++;
-		habitad = "selva";
-		Mamifero mamifero = new Mamifero(nombre, edad, habitad, genero, zona);
+		habitat = "selva";
+		Mamifero mamifero = new Mamifero(nombre, edad, habitat, genero, zona);
 		listado.add(mamifero);	
 	}
 	public int cantidadMamiferos() {
 		return listado.size();
 	}
+	public boolean isPelaje() {
+		return pelaje;
+	}
+	public void setPelaje(boolean pelaje) {
+		this.pelaje = pelaje;
+	}
+	public int getPatas() {
+		return patas;
+	}
+	public void setPatas(int patas) {
+		this.patas = patas;
+	}
+	
 	
 
 }

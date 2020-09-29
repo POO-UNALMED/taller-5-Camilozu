@@ -6,42 +6,60 @@ import gestion.Zona;
 
 public class Reptil extends Animal {
 
-	int iguanas;
-	int serpientes;
-	String colorEscamas;
-	int largoCola;
+	public int iguanas;
+	public int serpientes;
+	private String colorEscamas;
+	private int largoCola;
 	static LinkedList<Reptil> listado;
-	static String movimiento;
+	private static String movimiento;
 	static {
 		listado = new LinkedList <Reptil>();
 		movimiento = "reptar";
 	}
+	
+	public String getColorEscamas() {
+		return colorEscamas;
+	}
+	public void setColorEscamas(String colorEscamas) {
+		this.colorEscamas = colorEscamas;
+	}
+	public int getLargoCola() {
+		return largoCola;
+	}
+	public void setLargoCola(int largoCola) {
+		this.largoCola = largoCola;
+	}
 	public Reptil() {
 		super(null, 0, null, null, null);
 	}
-	public Reptil(String nombre, int edad, String habitad, String genero, Zona zona) {
-		super(nombre, edad, habitad, genero, zona);
+	public Reptil(String nombre, int edad, String habitat, String genero, String colorEscamas, int largoCola) {
+		   super(nombre, edad, habitat, genero, null);
+		   this.colorEscamas = colorEscamas;
+		   this.largoCola = largoCola;
+	   }
+	public Reptil(String nombre, int edad, String habitat, String genero, Zona zona) {
+		super(nombre, edad, habitat, genero, zona);
 	   }
 	public String movimiento() {
 		return movimiento;
    }	
 	
-	public void crearIguana() {
-		Reptil reptil = new Reptil(nombre, edad, habitad, genero, zona);
+	public void crearIguana(String nombre, int edad,String genero) {
+		Reptil reptil = new Reptil(nombre, edad, habitat, genero, zona);
 		listado.add(reptil);
 		iguanas++;
 		colorEscamas = "verde";
 		largoCola = 3;
-		habitad = "humedal";
+		habitat = "humedal";
 		
 	}
-    public void crearSerpiente() {
-    	Reptil reptil = new Reptil(nombre, edad, habitad, genero, zona);
+    public void crearSerpiente(String nombre, int edad,String genero) {
+    	Reptil reptil = new Reptil(nombre, edad, habitat, genero, zona);
 		listado.add(reptil);
 		serpientes++;
 		colorEscamas = "blanco";
 		largoCola = 1;
-		habitad = "jungla";
+		habitat = "jungla";
 		
 		
 	}

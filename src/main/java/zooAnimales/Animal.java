@@ -6,10 +6,11 @@ public class Animal {
 public static int totalAnimales;
 protected String nombre;
 protected int edad;
-protected String habitad;
+protected String habitat;
 protected String genero;
 protected Zona zona;
-protected String getNombre() {
+
+public String getNombre() {
 	return nombre;
 }
 public void setNombre(String nombre) {
@@ -21,11 +22,11 @@ public int getEdad() {
 public void setEdad(int edad) {
 	this.edad = edad;
 }
-public String getHabitad() {
-	return habitad;
+public String getHabitat() {
+	return habitat;
 }
-public void setHabitad(String habitad) {
-	this.habitad = habitad;
+public void sethabitat(String habitat) {
+	this.habitat = habitat;
 }
 public String getGenero() {
 	return genero;
@@ -51,12 +52,12 @@ public Animal() {
 	this(null, 0, null, null, null);
 	totalAnimales++;
 }
-public Animal(String nombre, int edad, String habitad, String genero) {
-	this(nombre, edad, habitad, genero, null);
+public Animal(String nombre, int edad, String habitat, String genero) {
+	this(nombre, edad, habitat, genero, null);
 	totalAnimales++;
 }
 
-public Animal(String nombre, int edad, String habitad, String genero, Zona zona) {
+public Animal(String nombre, int edad, String habitat, String genero, Zona zona) {
 	this.nombre = nombre;
 	this.edad = edad;
 	this.genero = genero;
@@ -79,10 +80,10 @@ public static String totalPorTipo() {
 
 public String toString() {
 	if (zona == null) {
-		return "Mi nombre es "+nombre+", tengo una edad de "+edad+", habito en "+habitad+" y mi genero es "+genero;
+		return "Mi nombre es "+nombre+", tengo una edad de "+edad+", habito en "+habitat+" y mi genero es "+genero;
 	}
 	else 
-	    return "Mi nombre es "+nombre+", tengo una edad de "+edad+", habito en "+habitad+" y mi genero es "+genero+", la zona es la que me ubcio es "+zona.getNombre()+", en el"+zona.getZoo().getNombre();
+	    return "Mi nombre es "+nombre+", tengo una edad de "+edad+", habito en "+habitat+" y mi genero es "+genero+", la zona es la que me ubcio es "+zona.getNombre()+", en el"+zona.getZoo().getNombre();
 }
 
 }

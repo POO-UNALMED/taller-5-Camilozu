@@ -7,6 +7,13 @@ public class Zoologico {
     private String nombre;
     private String ubicacion;
 	LinkedList <Zona> zonas;
+
+	
+	
+	
+	public Zoologico() {
+		this(null, null);				
+	}
 	public Zoologico(String nombre, String ubicacion) {
 		this.nombre = nombre;
 		this.ubicacion = ubicacion;

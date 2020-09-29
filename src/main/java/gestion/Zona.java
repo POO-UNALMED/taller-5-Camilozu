@@ -9,12 +9,11 @@ private String nombre;
 private Zoologico zoo;
 LinkedList <Animal> animales;
 
-Zona() {
-	nombre = null;
-	animales = new LinkedList<Animal>();
+public Zona() {
+	this(null, null);
 }
 
-Zona(String nombre, Zoologico zoo) {
+public Zona(String nombre, Zoologico zoo) {
 	this.nombre = nombre;
 	animales = new LinkedList<Animal>();
 }
