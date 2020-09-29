@@ -8,6 +8,7 @@ public class Reptil extends Animal {
 
 	static public int iguanas;
 	static public int serpientes;
+	static public int reptiles;
 	private String colorEscamas;
 	private int largoCola;
 	static LinkedList<Reptil> listado;
@@ -17,6 +18,25 @@ public class Reptil extends Animal {
 		movimiento = "reptar";
 	}
 	
+	public Reptil() {
+		super(null, 0, null, null, null);
+		reptiles++;
+	}
+	public Reptil(String nombre, int edad, String habitat, String genero, String colorEscamas, int largoCola) {
+		   super(nombre, edad, habitat, genero, null);
+		   this.colorEscamas = colorEscamas;
+		   this.largoCola = largoCola;
+		   reptiles++;
+	   }
+	public Reptil(String nombre, int edad, String habitat, String genero, Zona zona) {
+		super(nombre, edad, habitat, genero, zona);
+		reptiles++;
+	   }
+	public Reptil(String nombre, int edad, String genero) {
+		super(nombre, edad, genero);
+		reptiles++;
+		
+    }
 	public String getColorEscamas() {
 		return colorEscamas;
 	}
@@ -29,21 +49,6 @@ public class Reptil extends Animal {
 	public void setLargoCola(int largoCola) {
 		this.largoCola = largoCola;
 	}
-	public Reptil() {
-		super(null, 0, null, null, null);
-	}
-	public Reptil(String nombre, int edad, String habitat, String genero, String colorEscamas, int largoCola) {
-		   super(nombre, edad, habitat, genero, null);
-		   this.colorEscamas = colorEscamas;
-		   this.largoCola = largoCola;
-	   }
-	public Reptil(String nombre, int edad, String habitat, String genero, Zona zona) {
-		super(nombre, edad, habitat, genero, zona);
-	   }
-	public Reptil(String nombre, int edad, String genero) {
-		super(nombre, edad, genero);
-		
-    }
 	public String movimiento() {
 		return movimiento;
     }	

@@ -27,8 +27,8 @@ public class Zoologico {
         zonas.add(zona);
     }
     public int cantidadTotalAnimales() {
-    	return Mamifero.caballos+Mamifero.leones+Ave.halcones+Ave.aguilas+Reptil.iguanas+Reptil.serpientes+Pez.salmones+Pez.bacalaos+Anfibio.ranas+Anfibio.salamandras;
-    	//return Animal.totalAnimales;
+    	//return Mamifero.caballos+Mamifero.leones+Ave.halcones+Ave.aguilas+Reptil.iguanas+Reptil.serpientes+Pez.salmones+Pez.bacalaos+Anfibio.ranas+Anfibio.salamandras;
+    	return Animal.totalAnimales;
     }
 
 	public String getNombre() {

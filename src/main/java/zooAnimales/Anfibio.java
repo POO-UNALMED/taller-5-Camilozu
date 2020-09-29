@@ -8,6 +8,7 @@ public class Anfibio extends Animal {
 
 	static public int ranas;
 	static public int salamandras;
+	static public int anfibios;
 	private String colorPiel;
 	private boolean venenoso;
 	static LinkedList <Anfibio> listado;
@@ -16,6 +17,25 @@ public class Anfibio extends Animal {
 		listado = new LinkedList <Anfibio>();
 		movimiento = "saltar";
 	}
+	
+	public Anfibio() {
+		super(null, 0, null, null, null);
+		anfibios++;
+	}
+	public Anfibio(String nombre, int edad, String habitat, String genero, String colorPiel, boolean venenoso) {
+		   super(nombre, edad, habitat, genero, null);
+		   this.colorPiel = colorPiel;
+		   this.venenoso = venenoso;
+		   anfibios++;
+	 }
+	public Anfibio(String nombre, int edad, String habitat, String genero, Zona zona) {
+		super(nombre, edad, habitat, genero, zona);
+		anfibios++;
+	}
+	public Anfibio(String nombre, int edad, String genero) {
+		super(nombre, edad, genero);
+		anfibios++;
+    }
 	public String getColorPiel() {
 		return colorPiel;
 	}
@@ -28,21 +48,6 @@ public class Anfibio extends Animal {
 	public void setVenenoso(boolean venenoso) {
 		this.venenoso = venenoso;
 	}
-	public Anfibio() {
-		super(null, 0, null, null, null);
-	}
-	public Anfibio(String nombre, int edad, String habitat, String genero, String colorPiel, boolean venenoso) {
-		   super(nombre, edad, habitat, genero, null);
-		   this.colorPiel = colorPiel;
-		   this.venenoso = venenoso;
-	 }
-	public Anfibio(String nombre, int edad, String habitat, String genero, Zona zona) {
-		super(nombre, edad, habitat, genero, zona);
-		
-	}
-	public Anfibio(String nombre, int edad, String genero) {
-		super(nombre, edad, genero);	
-    }
 	public String movimiento() {
 		return movimiento;
    }

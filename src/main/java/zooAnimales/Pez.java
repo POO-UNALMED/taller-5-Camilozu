@@ -8,6 +8,7 @@ public class Pez extends Animal {
 
 	static public int salmones;
 	static public int bacalaos;
+	static public int peces;
 	private String colorEscamas;
 	private int cantidadAletas;
 	static LinkedList <Pez> listado;
@@ -17,6 +18,24 @@ public class Pez extends Animal {
 		movimiento = "nadar";
 	}
 	
+	public Pez() {
+		super(null, 0, null, null, null);
+		peces++;
+	}
+	public Pez(String nombre, int edad, String habitat, String genero, String colorEscamas, int cantidadAletas) {
+		   super(nombre, edad, habitat, genero, null);
+		   this.colorEscamas = colorEscamas;
+		   this.cantidadAletas = cantidadAletas;
+		   peces++;
+	   }
+	public Pez(String nombre, int edad, String habitat, String genero, Zona zona) {
+		super(nombre, edad, habitat, genero, zona);
+		peces++;		
+	}
+	public Pez(String nombre, int edad, String genero) {
+		super(nombre, edad, genero);
+		peces++;
+    }
 	public String getColorEscamas() {
 		return colorEscamas;
 	}
@@ -29,21 +48,6 @@ public class Pez extends Animal {
 	public void setCantidadAletas(int cantidadAletas) {
 		this.cantidadAletas = cantidadAletas;
 	}
-	public Pez() {
-		super(null, 0, null, null, null);
-	}
-	public Pez(String nombre, int edad, String habitat, String genero, String colorEscamas, int cantidadAletas) {
-		   super(nombre, edad, habitat, genero, null);
-		   this.colorEscamas = colorEscamas;
-		   this.cantidadAletas = cantidadAletas;
-	   }
-	public Pez(String nombre, int edad, String habitat, String genero, Zona zona) {
-		super(nombre, edad, habitat, genero, zona);
-		
-	}
-	public Pez(String nombre, int edad, String genero) {
-		super(nombre, edad, genero);	
-    }
 	public String movimiento() {
 		return movimiento;
    }

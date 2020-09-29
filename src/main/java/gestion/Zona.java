@@ -24,9 +24,11 @@ public Zona(String nombre, Zoologico zoo) {
 public void agregarAnimales() {
 	Animal animal = new Animal(null, 0, null, null, null);
 	animales.add(animal);
+	Animal.totalAnimales++;
 }
 public void agregarAnimales(Animal animal) {
 	animales.add(animal);
+	Animal.totalAnimales++;
 }
 public int cantidadAnimales() {
 	return animales.size();

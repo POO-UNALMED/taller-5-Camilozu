@@ -21,11 +21,11 @@ static {
 }
 public Animal() {
 	this(null, 0, null, null, null);
-	totalAnimales++;
+	//totalAnimales++;
 }
 public Animal(String nombre, int edad, String habitat, String genero) {
 	this(nombre, edad, habitat, genero, null);
-	totalAnimales++;
+	//totalAnimales++;
 }
 
 public Animal(String nombre, int edad, String habitat, String genero, Zona zona) {
@@ -33,24 +33,24 @@ public Animal(String nombre, int edad, String habitat, String genero, Zona zona)
 	this.edad = edad;
 	this.genero = genero;
 	this.zona = zona;
-	totalAnimales++;
+	//totalAnimales++;
 }
 public Animal(String nombre, int edad, String genero) {
 	this.nombre = nombre;
 	this.edad = edad;
 	this.genero = genero;
-	totalAnimales++;
+	//totalAnimales++;
     }
 public String movimiento() {
 	return movimiento;
 }
 
 public static String totalPorTipo() {
-	return "Mamiferos: "+Mamifero.listado.size()+
-	" Aves: "+Ave.listado.size()+
-	" Reptiles: "+Reptil.listado.size()+
-	" Peces: "+Pez.listado.size()+
-	" Anfibios: "+Anfibio.listado.size();
+	return "Mamiferos: "+Mamifero.mamiferos+
+	" Aves: "+Ave.aves+
+	" Reptiles: "+Reptil.reptiles+
+	" Peces: "+Pez.peces+
+	" Anfibios: "+Anfibio.anfibios;
 	
 }
 

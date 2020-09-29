@@ -6,6 +6,7 @@ import gestion.Zona;
 public class Ave extends Animal {
    static public int halcones;
    static public int aguilas;
+   static public int aves;
    private String colorPlumas;
    private static String movimiento;
    static LinkedList <Ave> listado;
@@ -22,16 +23,20 @@ public class Ave extends Animal {
 	}
    public Ave() {
 	   super(null, 0, null, null, null);
+	   aves++;
    }
    public Ave(String nombre, int edad, String habitat, String genero, String colorPlumas) {
 	   super(nombre, edad, habitat, genero, null);
 	   this.colorPlumas = colorPlumas;
+	   aves++;
    }
    public Ave(String nombre, int edad, String habitat, String genero, Zona zona) {
 	   super(nombre, edad, habitat, genero, zona);
+	   aves++;
    }
    public Ave(String nombre, int edad, String genero) {
 		super(nombre, edad, genero);
+		aves++;
    }
    public String movimiento() {
 		return movimiento;
