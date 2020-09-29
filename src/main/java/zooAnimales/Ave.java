@@ -34,22 +34,22 @@ public class Ave extends Animal {
 		return movimiento;
    }
    
-	public void crearHalcon(String nombre, int edad,String genero) {
+	public Ave crearHalcon(String nombre, int edad,String genero) {
 		Ave ave = new Ave(nombre, edad, habitat, genero, zona);
 		listado.add(ave);
 		halcones++;
 		colorPlumas ="cafe glorioso";
 		habitat = "montanas";
-		
+		return ave;
 	}
 	
-	public void crearAguila(String nombre, int edad,String genero) {
+	public Ave crearAguila(String nombre, int edad,String genero) {
 		Ave ave = new Ave(nombre, edad, habitat, genero, zona);
 		listado.add(ave);
 		aguilas++;
 		colorPlumas ="blanco y amarillo";
 		habitat = "montanas";
-		
+		return ave;
 	}
 	public int cantidadAves() {
 		return listado.size();

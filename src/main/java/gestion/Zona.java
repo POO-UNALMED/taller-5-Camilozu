@@ -12,7 +12,9 @@ LinkedList <Animal> animales;
 public Zona() {
 	this(null, null);
 }
-
+public Zona(Zoologico zoo) {
+	this(null, zoo);
+}
 public Zona(String nombre, Zoologico zoo) {
 	this.nombre = nombre;
 	animales = new LinkedList<Animal>();
@@ -20,6 +22,9 @@ public Zona(String nombre, Zoologico zoo) {
 
 void agregarAnimales() {
 	Animal animal = new Animal(null, 0, null, null, null);
+	animales.add(animal);
+}
+void agregarAnimales(Animal animal) {
 	animales.add(animal);
 }
 int cantidadAnimales() {
