@@ -3,13 +3,10 @@ import zooAnimales.*;
 public class app {
 
 	public static void main(String[] args) {
-		Mamifero mamifero = new Mamifero();
-		Reptil reptil = new Reptil();
-		Animal a2 = new Ave();
-		System.out.println(Animal.totalPorTipo());
-		System.out.println(a2.movimiento());
-		System.out.println(a2.toString());
-		Mamifero.crearLeon("test", 11, "M");
+		Zoologico zoo1 = new Zoologico();
+		Zona zona1 = new Zona();
+		Zona zona2 = new Zona("salvaje", zoo1);
+		System.out.println(zona2.getZoo());
 	}
 
 }

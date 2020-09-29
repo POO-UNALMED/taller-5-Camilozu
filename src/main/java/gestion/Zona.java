@@ -17,6 +17,7 @@ public Zona(Zoologico zoo) {
 }
 public Zona(String nombre, Zoologico zoo) {
 	this.nombre = nombre;
+	this.zoo = zoo;
 	animales = new LinkedList<Animal>();
 }
 
