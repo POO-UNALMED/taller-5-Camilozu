@@ -42,7 +42,7 @@ public class Ave extends Animal {
 		listado.add(ave);
 		halcones++;
 		ave.colorPlumas ="cafe glorioso";
-		ave.habitat = "montañas";
+		ave.habitat = "montanas";
 		return ave;
 	}
 	
@@ -51,7 +51,7 @@ public class Ave extends Animal {
 		listado.add(ave);
 		aguilas++;
 		ave.colorPlumas ="blanco y amarillo";
-		ave.habitat = "montañas";
+		ave.habitat = "montanas";
 		return ave;
 	}
 	public int cantidadAves() {
