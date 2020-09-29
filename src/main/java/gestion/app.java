@@ -4,33 +4,16 @@ public class app {
 
 	public static void main(String[] args) {
 				
-		 Zoologico zoo = new Zoologico();
-		
-		   
-			Zona z1 = new Zona();
-			Zona z2 = new Zona();
-			zoo.agregarZonas(z1);
-			zoo.agregarZonas(z2);
-			z1.agregarAnimales(Mamifero.crearCaballo("test", 11, "M"));
-			z1.agregarAnimales(Mamifero.crearCaballo("test", 11, "M"));
-			z1.agregarAnimales(Mamifero.crearLeon("test", 11, "M"));
-			z1.agregarAnimales(Ave.crearHalcon("test", 11, "M"));
-			z1.agregarAnimales(Ave.crearHalcon("test", 11, "M"));
-			z1.agregarAnimales(Ave.crearAguila("test", 11, "M"));
-			z1.agregarAnimales(Ave.crearAguila("test", 11, "M"));
-			z1.agregarAnimales(Anfibio.crearRana("test", 11, "M"));
-			z2.agregarAnimales(Anfibio.crearSalamandra("test", 11, "M"));
-			z2.agregarAnimales(Reptil.crearIguana("test", 11, "M"));
-			z2.agregarAnimales(Reptil.crearSerpiente("test", 11, "M"));
-			z2.agregarAnimales(Pez.crearSalmon("test", 11, "M"));
-			z2.agregarAnimales(Pez.crearBacalao("test", 11, "M"));
-			Mamifero.crearCaballo("test", 11, "M");
-			Ave.crearHalcon("test", 11, "M");
-			Anfibio.crearRana("test", 11, "M");
-			Reptil.crearIguana("test", 11, "M");
-			Pez.crearBacalao("test", 11, "M");
-			System.out.println(zoo.cantidadTotalAnimales());
-		    
+		Animal a1 = new Anfibio();
+		Animal a2 = new Ave();
+		Animal a3 = new Mamifero();
+		Animal a4 = new Pez();
+		Animal a5 = new Reptil();
+		System.out.println(a1.movimiento());
+		System.out.println(a2.movimiento());
+		System.out.println(a3.movimiento());
+	    System.out.println(a4.movimiento());
+	    System.out.println(a5.movimiento());
 	}
 
 }

@@ -19,7 +19,7 @@ public class Mamifero extends Animal {
 	
 	static {
 		listado = new LinkedList <Mamifero>();
-		movimiento = "desplazarce";
+		movimiento = "desplazarse";
 	}
 	
 	public Mamifero() {
