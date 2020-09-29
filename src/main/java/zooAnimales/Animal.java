@@ -64,6 +64,12 @@ public Animal(String nombre, int edad, String habitat, String genero, Zona zona)
 	this.zona = zona;
 	totalAnimales++;
 }
+public Animal(String nombre, int edad, String genero) {
+	this.nombre = nombre;
+	this.edad = edad;
+	this.genero = genero;
+	totalAnimales++;
+    }
 public String movimiento() {
 	return movimiento;
 }

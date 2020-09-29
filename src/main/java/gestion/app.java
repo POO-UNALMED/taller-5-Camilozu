@@ -9,6 +9,7 @@ public class app {
 		System.out.println(Animal.totalPorTipo());
 		System.out.println(a2.movimiento());
 		System.out.println(a2.toString());
+		Mamifero.crearLeon("test", 11, "M");
 	}
 
 }

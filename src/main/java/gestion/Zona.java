@@ -20,11 +20,11 @@ public Zona(String nombre, Zoologico zoo) {
 	animales = new LinkedList<Animal>();
 }
 
-void agregarAnimales() {
+public void agregarAnimales() {
 	Animal animal = new Animal(null, 0, null, null, null);
 	animales.add(animal);
 }
-void agregarAnimales(Animal animal) {
+public void agregarAnimales(Animal animal) {
 	animales.add(animal);
 }
 int cantidadAnimales() {

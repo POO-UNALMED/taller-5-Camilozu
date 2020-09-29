@@ -41,28 +41,31 @@ public class Pez extends Animal {
 		super(nombre, edad, habitat, genero, zona);
 		
 	}
+	public Pez(String nombre, int edad, String genero) {
+		super(nombre, edad, genero);	
+    }
 	public String movimiento() {
 		return movimiento;
    }
 	
-	public Pez crearSalmon(String nombre, int edad,String genero) {
-		Pez pez = new Pez(nombre, edad, habitat, genero, zona);
+	public static Pez crearSalmon(String nombre, int edad,String genero) {
+		Pez pez = new Pez(nombre, edad, genero);
 		listado.add(pez);
 		salmones++;
-		colorEscamas = "rojo";
-		cantidadAletas = 6;
-		habitat = "oceano";
+		pez.colorEscamas = "rojo";
+		pez.cantidadAletas = 6;
+		pez.habitat = "oceano";
 		return pez;
 		
 	}
 	
-	public Pez crearBacalao(String nombre, int edad,String genero) {
-		Pez pez = new Pez(nombre, edad, habitat, genero, zona);
+	public static Pez crearBacalao(String nombre, int edad,String genero) {
+		Pez pez = new Pez(nombre, edad, genero);
 		listado.add(pez);
 		bacalaos++;
-		colorEscamas = "gris";
-		cantidadAletas = 6;
-		habitat = "oceano";
+		pez.colorEscamas = "gris";
+		pez.cantidadAletas = 6;
+		pez.habitat = "oceano";
 		return pez;
 		
 	}

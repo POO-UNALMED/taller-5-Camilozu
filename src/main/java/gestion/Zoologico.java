@@ -20,8 +20,7 @@ public class Zoologico {
 		zonas = new LinkedList<Zona>();					
 	}
 
-	void agregarZonas(Zoologico zoo) {
-    	Zona zona = new Zona(nombre,zoo);
+	void agregarZonas(Zona zona) {
         zonas.add(zona);
     }
     int cantidadTotalAnimales() {

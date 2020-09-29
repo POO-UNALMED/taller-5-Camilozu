@@ -31,25 +31,31 @@ public class Mamifero extends Animal {
 	   }
 	public Mamifero(String nombre, int edad, String habitat, String genero, Zona zona) {
 		super(nombre, edad, habitat, genero, zona);
-		pelaje = true;
-		patas = 4;
 	}
+	public Mamifero(String nombre, int edad, String genero) {
+		super(nombre, edad, genero);
+	}
+	
 	public String movimiento() {
 		return movimiento;	
 	}
 	
-	public Mamifero crearCaballo(String nombre, int edad,String genero) {
+	public static Mamifero crearCaballo(String nombre, int edad,String genero) {
 		caballos++;
-		habitat = "pradera";
-		Mamifero mamifero = new Mamifero(nombre, edad, habitat, genero, zona);
+		Mamifero mamifero = new Mamifero(nombre, edad, genero);
 		listado.add(mamifero);
+		mamifero.habitat = "pradera";
+		mamifero.pelaje = true;
+		mamifero.patas = 4;
 		return mamifero;
 	}
-	public Mamifero crearLeon(String nombre, int edad,String genero) {
+	public static Mamifero crearLeon(String nombre, int edad,String genero) {
 		leones++;
-		habitat = "selva";
-		Mamifero mamifero = new Mamifero(nombre, edad, habitat, genero, zona);
-		listado.add(mamifero);	
+		Mamifero mamifero = new Mamifero(nombre, edad, genero);
+		listado.add(mamifero);
+		mamifero.habitat = "selva";
+		mamifero.pelaje = true;
+		mamifero.patas = 4;
 		return mamifero;
 	}
 	public int cantidadMamiferos() {

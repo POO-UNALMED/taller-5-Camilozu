@@ -30,25 +30,28 @@ public class Ave extends Animal {
    public Ave(String nombre, int edad, String habitat, String genero, Zona zona) {
 	   super(nombre, edad, habitat, genero, zona);
    }
+   public Ave(String nombre, int edad, String genero) {
+		super(nombre, edad, genero);
+   }
    public String movimiento() {
 		return movimiento;
    }
    
-	public Ave crearHalcon(String nombre, int edad,String genero) {
-		Ave ave = new Ave(nombre, edad, habitat, genero, zona);
+	public static Ave crearHalcon(String nombre, int edad,String genero) {
+		Ave ave = new Ave(nombre, edad, genero);
 		listado.add(ave);
 		halcones++;
-		colorPlumas ="cafe glorioso";
-		habitat = "montanas";
+		ave.colorPlumas ="cafe glorioso";
+		ave.habitat = "montañas";
 		return ave;
 	}
 	
-	public Ave crearAguila(String nombre, int edad,String genero) {
-		Ave ave = new Ave(nombre, edad, habitat, genero, zona);
+	public static Ave crearAguila(String nombre, int edad,String genero) {
+		Ave ave = new Ave(nombre, edad,genero);
 		listado.add(ave);
 		aguilas++;
-		colorPlumas ="blanco y amarillo";
-		habitat = "montanas";
+		ave.colorPlumas ="blanco y amarillo";
+		ave.habitat = "montañas";
 		return ave;
 	}
 	public int cantidadAves() {
