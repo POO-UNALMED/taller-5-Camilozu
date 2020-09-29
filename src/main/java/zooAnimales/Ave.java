@@ -4,8 +4,8 @@ import java.util.LinkedList;
 import gestion.Zona;
 
 public class Ave extends Animal {
-   public int halcones;
-   public int aguilas;
+   static public int halcones;
+   static public int aguilas;
    private String colorPlumas;
    private static String movimiento;
    static LinkedList <Ave> listado;

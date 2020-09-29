@@ -6,8 +6,8 @@ import gestion.Zona;
 
 public class Anfibio extends Animal {
 
-	public int ranas;
-	public int salamandras;
+	static public int ranas;
+	static public int salamandras;
 	private String colorPiel;
 	private boolean venenoso;
 	static LinkedList <Anfibio> listado;

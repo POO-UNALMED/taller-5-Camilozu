@@ -9,8 +9,8 @@ import gestion.Zona;
 public class Mamifero extends Animal {
 
 	
-	public int caballos;
-	public int leones;
+	static public int caballos;
+	static public int leones;
 	private boolean pelaje;
 	private int patas;
 	private static String movimiento;

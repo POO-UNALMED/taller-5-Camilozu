@@ -6,8 +6,8 @@ import gestion.Zona;
 
 public class Pez extends Animal {
 
-	public int salmones;
-	public int bacalaos;
+	static public int salmones;
+	static public int bacalaos;
 	private String colorEscamas;
 	private int cantidadAletas;
 	static LinkedList <Pez> listado;
